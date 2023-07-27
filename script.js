@@ -5,9 +5,9 @@ getButton = document.querySelector("form button");
 
 for (let i = 0; i < dropList.length; i++) {
     for(let currency_code in country_list){
-        // selecting USD by default as FROM currency and NPR as TO currency
-        let selected = i == 0 ? currency_code == "USD" ? "selected" : "" : currency_code == "NPR" ? "selected" : "";
-        // creating option tag with passing currency code as a text and value
+        // selecting USD by default as FROM currency and CNY as TO currency
+        let selected = i == 0 ? currency_code == "USD" ? "selected" : "" : currency_code == "CNY" ? "selected" : "";
+        // creating option tag with currency code as a text and value
         let optionTag = `<option value="${currency_code}" ${selected}>${currency_code}</option>`;
         // inserting options tag inside select tag
         dropList[i].insertAdjacentHTML("beforeend", optionTag);
@@ -71,7 +71,7 @@ function getExchangeRate(){
         exchangeRateTxt.innerText = `${amountVal} ${fromCurrency.value} = ${totalExRate} ${toCurrency.value}`;
      
 
-      rateArray[0]=exchangeRate*parseInt(amountVal);
+      rateArray[0]=1 / exchangeRate*parseInt(amountVal);
       
     
     }).catch(() =>{ // if user is offline or any other error occured while fetching data then catch function will run
@@ -140,8 +140,8 @@ function getToCoffeePrice(){
     
     var data = google.visualization.arrayToDataTable([
       ["Country", "Rate", { role: "style" } ],
-      [fromname.value,parseInt(amountVal) , "red"],
-      [toname.value, rate, "orange"],
+      [fromname.value,parseInt(amountVal) , "blue"],
+      [toname.value, rate, "blue"],
      
     ]);
 
@@ -155,7 +155,7 @@ function getToCoffeePrice(){
 
     var options = {
       title: "",
-      width: 560,
+      width: 400,
       height: 400,
       bar: {groupWidth: "95%"},
       legend: { position: "none" },

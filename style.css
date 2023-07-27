@@ -15,7 +15,7 @@ body{
   justify-content: center;
   min-height: 100vh;
   padding: 0 10px;
-  background: #416dff;
+  background: #f2885c;
 }
 
 .containerOne{
@@ -24,7 +24,7 @@ body{
   top: 10px;
 
   text-align: center;
-  font-size: 25px;
+  font-size: 50px;
   font-weight: bold;
   color:#f7f7f7;
 
@@ -34,10 +34,12 @@ body{
 .containerTwo{
   max-width: fit-content;
   position: fixed;
-  top: 75px;
+  top: 115px;
 
   min-height: fit-content;
   max-height: 500px;
+
+  outline: black;
 }
 
 .containerThree{
@@ -48,6 +50,8 @@ body{
   top: 725px;
   left: 775px;
   align-items: center;
+
+  outline: black;
 }
 
 .containerFour{
@@ -58,6 +62,8 @@ body{
   position: fixed;
   top: 685px;
   left: 742px;
+
+  outline: black;
 }
 
 .flex-container {
@@ -71,15 +77,15 @@ body{
   border-radius: 5px;
   padding: 20px;
   max-width: fit-content;
-  max-height: 500px;
+  max-height: fit-content;
   background-color: white;
 }  
 
 .flex-child:first-child {
   border-radius: 5px;
   margin-right: 20px;
-  max-height: 500px;
-  padding: 20px;
+  max-height: fit-content;
+  padding: 30px;
   background-color: white;
 } 
 
@@ -110,6 +116,7 @@ body{
   border: 2px solid #000000;
   max-width: fit-content;
   min-width: 400px;
+  max-height: fit-content;
   min-height: 400px;
   padding: 10px;
 }
@@ -212,11 +219,11 @@ form button{
   color: #fff;
   font-size: 17px;
   cursor: pointer;
-  background: #675AFE;
+  background: #f17d4d;
   transition: 0.3s ease;
 }
 form button:hover{
-  background: #4534fe;
+  background: #a63a0c;
 }
 
 .container {
